@@ -185,11 +185,20 @@ $0
 
 Zastanawiamy się czy obsługa tego będzie mogła postępować po za główną pętlą w czasie kiedy mamy SLIPPING spanie. Wtedy może być odwiedzanie tych stron i pilonowanie tego by dane były zbierane dokładnie z tych 5 stron internetowych. Mam tu na myśli tylko dane TXT, bo dane SS to przejście tak jak zawsze robimy. Ss bitmex i SS headmap i doszło by kilka SS z tych stron (te strony musiałby być do wybierania "SS pięciu wskaźników" zaznaczane ptaszkiem w menu przed uruchomieniem programu pętli.)
 
+==============================
+==========================================================
+===================================================================================
 **# Perspektywy. Perspective**
-
-Notatka Maniek: jeśli jest SLIPPING spanie to działać będzie inaczej niż jeśli nie jest SLIPPING spanie. Teraz chcemy to w pętli odwzorować. jeśli nie śpi to kolekcjonuje dane z tych pięciu stron internetowych i zapisuje do pliku tekstowego i do json. Ma być to wsad json z danych pochodzących z 30 minut zbierania ostatnich aktualnych wiadomości. To będzie podawane gdy pętla się wybudzi i będzie szła zadawać nowe pytania do wszystkich AI a następnie idzie robić SS headmap i SS bitmex i idzie po odpowiedzi do tych stron AI i idzie wkleić raport do gemini to niech załącza do raportu w formacie json dane z tych 30 min "co się działo na tych pięciu wskaźnikach w ostatnich 30 minutach?". Myślę, że taki komplet danych byłby łatwy do rzetworzenia dla Gemini. To byłby komplet danych z 30 minut.
+Notatka Maniek: jeśli jest SLIPPING spanie to działać będzie inaczej niż jeśli nie jest SLIPPING spanie. Teraz chcemy to w pętli odwzorować. jeśli nie śpi to kolekcjonuje dane z tych pięciu stron internetowych i zapisuje do pliku tekstowego i do json. Ma być to wsad json z danych pochodzących z 30 minut zbierania ostatnich aktualnych wiadomości. To będzie podawane gdy pętla się wybudzi i będzie szła zadawać nowe pytania do wszystkich AI a następnie idzie robić SS headmap i SS bitmex i idzie po odpowiedzi do tych stron AI i idzie wkleić raport do gemini to niech załącza do raportu w formacie json dane z tych 30 min "co się działo na tych pięciu wskaźnikach w ostatnich 30 minutach?". Myślę, że taki komplet danych byłby łatwy do przetworzenia dla Gemini. To byłby komplet danych z 30 minut.
 
 Te zmiany pozwoliłby działać skryptowi w czasie gdy śpi. Zbierałby najważniejsze dane. Można to rozbudować by te dane zebrane wstępnie posortować by to przypominało wersję API za 99 $. Trudne do napisania. Bany na IP od operatora coinglass. Można to obchodzić ale lepiej wykupić API. Wersja Z API coinglass działająca to C:\Users\maxim\all_doc_pro\ALL-TradingAgent\Epic_v8_4_et_v33\EPIC_Agent_1_v0_6_5_stop_ok poprzedni katalog.
+
+Działa poprawnie po zmianach od wersji (v0.9.2). 06.01.2026
+Dane TXT SS Vision, doskonałe zabazpieczenie w przypadku awari API Coinglass, API Binance, i innych np API różnych AI ect.
+Rozważyć naprawę (utrata internetu), przełącznik na innego operatora sieci WIFI i sieci komórkowych. Rozważyć to w planie i zrobic aktualizację ROADMAP.md INSTRUKCJA_OBSŁUGI.md
+===================================================================================
+================================================================
+=============================================
 
 **# Proof of Concept**
 1. dyt folderu projektu
