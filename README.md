@@ -1,5 +1,11 @@
 # EPIC_AGENT_v0_9_2: Three-Agent Stack for BTC Trading
 
+DISCLAIMER:
+This software is experimental and provided "AS IS" without any warranty.
+It is NOT financial advice. Trading cryptocurrencies involves high risk of total capital loss.
+Use only on demo accounts first. Author is not responsible for any financial losses, damages, or consequences of using this bot.
+You assume all risk.
+
 Automatyczny bot tradingowy dla Bitcoin na Binance, oparty na AI (Grok, Copilot, DeepSeek, Qwen, Gemini). Zbiera dane z API (Coinglass, Binance), web scraping (vision-based) i analizuje sentyment dla EV+ trade'ów (expected value positive). Focus: Liquidity grabs, retests, HODL z day tradingiem.
 
 ## Architektura
