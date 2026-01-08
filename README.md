@@ -16,7 +16,7 @@ Modularny system w Pythonie:
 - **Utils**: ConfigManager, Logger, Parsers (regex), SignalMessenger (commands).
 - **GUI**: Main.py z Tkinter, HUD (statusy/PnL), CalibrationWizard (coordy).
 
-Szczegóły: [docs/architecture.md](docs/architecture.md) (Hamilton-inspired resilience).
+Szczegóły: [docs/architecture.md](Three-Agent_Stack/blob/main/docs/ARCHITEKTURA_HAMILTON.md) (Hamilton-inspired resilience).
 
 ## Inspiracje i Analizy
 - Three-Agent Stack w HFT: [docs/hft_inspiration.md](docs/IDEA_PLAISANT_GEMINI.md).
