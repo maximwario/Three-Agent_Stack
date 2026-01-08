@@ -43,7 +43,10 @@ Edit `intel_config_v33.ini`:
 - **[SYSTEM]**: Set `loop_interval_min = 18`, `agent_3_enabled = False` (for demo – enable later).
 - **[SECRETS]**: Add Coinglass API key.
 - **[TIMING]**: Adjust waits (e.g., gemini_think=80s).
-- **[BINANCE_CONTROLS] etc.**: Calibrate later.
+- **[BINANCE_CONTROLS] etc.**: For A3 (Agent_3) on/off to function properly:
+1. Ensure you are on the Binance FUTURES tab.
+2. Enable/check the TP/SL button.
+3. In "Cancel all orders", select "All" from the dropdown (options: "All", "LIMIT", "Stop-Limit"). Note: There is no default selection, but Binance remembers the choice after the first manual selection.
 
 ## Step 5: Calibration (Must-Do!)
 Run `python main.py` → Menu → "Kalibracja".
