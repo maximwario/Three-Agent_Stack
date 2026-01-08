@@ -16,12 +16,12 @@ Modularny system w Pythonie:
 - **Utils**: ConfigManager, Logger, Parsers (regex), SignalMessenger (commands).
 - **GUI**: Main.py z Tkinter, HUD (statusy/PnL), CalibrationWizard (coordy).
 
-Szczegóły: [docs/architecture.md](Three-Agent_Stack/blob/main/docs/ARCHITEKTURA_HAMILTON.md) (Hamilton-inspired resilience).
+Szczegóły: [docs/architecture.md](docs/ARCHITEKTURA_HAMILTON.md) (Hamilton-inspired resilience).
 
 ## Inspiracje i Analizy
 - Three-Agent Stack w HFT: [docs/hft_inspiration.md](docs/IDEA_PLAISANT_GEMINI.md).
 - Analiza Groka: Zalążek AGI tradingu – [docs/project_analysis.md](docs/IDEA_PLAISANT_GROK.md).
-- Prompty AI: [docs/prompts/](prompts) (INIT_* files).
+- Prompty AI: [docs/prompts/](docs/prompts) (INIT_* files).
 
 ## Instalacja
 1. Python 3.10+.
@@ -31,19 +31,19 @@ Szczegóły: [docs/architecture.md](Three-Agent_Stack/blob/main/docs/ARCHITEKTUR
 5. Kalibracja: python main.py → Menu → Kalibracja.
 
 ## Usage
-Szczegóły: [docs/setup.md](docs/setup.md) (uruchomienie, troubleshooting).
+Szczegóły: [setup.md](setup.md) (uruchomienie, troubleshooting).
 
 ## Tests
 - python tests/test_strategist.py (AI parsing).
 - verify_parser.py (regex orders).
 
 ## Audyty i Historia
-* - [docs/audits/](Audyt_Grok_v0_9_2.md) (Grok/Gemini reviews, stability 8/10).
+* - [audits/](Audyt_Grok_v0_9_2.md) (Grok/Gemini reviews, stability 8/10).
 - Archive: Technical_Old/ (stare wersje, logi).
 
 ## Roadmap
 - v0.9.2: API, State Machine
-- Więcej: [docs/roadmap.md](docs/roadmap.md). [docs/INSTRUKCJA_OBSŁUGI.md](docs/INSTRUKCJA_OBSŁUGI.md).
+- Więcej: [docs/roadmap.md](docs/ROADMAP.md). [docs/INSTRUKCJA_OBSŁUGI.md](docs/INSTRUKCJA_OBSŁUGI.md).
 
 Licensed under GPL-3.0 – see [LICENSE](LICENSE).
 
