@@ -1,0 +1,49 @@
+# Python specifics (bytecode, virtual envs)
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.egg-info/
+*.eggs/
+dist/
+build/
+*.whl
+
+# Data & Logs (your project files)
+system_log.txt
+market_data_latest.json
+market_data_web.json
+market_history.jsonl
+mission_status.json
+runtime_state.json
+dynamic_prompts.json
+*.jsonl  # All jsonl logs
+# temp_vision/  # Screenshots dir
+assets/  # If generated, ignore user-specific assets
+
+# Config secrets (placeholders OK, but ignore backups)
+intel_config_v33.ini.bak
+*.ini.bak
+
+# Old/Archive (if not needed in repo)
+# TECHNICAL_OLD/
+
+# IDE/Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Misc
+*.log
+*.tmp
+*.bak

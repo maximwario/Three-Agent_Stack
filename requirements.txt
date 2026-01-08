@@ -1,0 +1,7 @@
+pyautogui
+pyperclip
+pynput
+tkinter  # built-in, ale dla pewności
+requests
+ccxt
+configparser  # dla ConfigManager

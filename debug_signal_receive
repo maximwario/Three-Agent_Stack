@@ -1,0 +1,49 @@
+# -*- coding: utf-8 -*-
+# Copyright (C) 2026 plaisant
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+import subprocess
+import json
+import time
+
+def manual_test():
+    # Dane z Twojego configu
+    cli_path = r"C:\signal-cli\signal-cli-0.13.22\bin\signal-cli.bat"
+    account = "+xxXXXxxXXxx"     # Twój numer bota
+    
+    print(f"--- TEST ODBIERANIA SYGNAŁU ({time.strftime('%H:%M:%S')}) ---")
+    print(f"Łączenie z kontem: {account}...")
+    
+    try:
+        # Próba odebrania wiadomości w formacie JSON
+        cmd = [cli_path, "-u", account, "receive", "--json"]
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=20)
+        
+        if result.stdout:
+            print("[SUKCES] Wykryto surowe dane z Signal-CLI:")
+            for line in result.stdout.strip().split('\n'):
+                data = json.loads(line)
+                msg = data.get('envelope', {}).get('dataMessage', {}).get('message')
+                sender = data.get('envelope', {}).get('source')
+                if msg:
+                    print(f" -> OD: {sender} | TREŚĆ: {msg}")
+        else:
+            print("[INFO] Skrzynka pusta lub brak nowych wiadomości.")
+            
+    except subprocess.TimeoutExpired:
+        print("[TIMEOUT] Signal-cli nie odpowiedział w ciągu 20s.")
+    except Exception as e:
+        print(f"[BŁĄD] Coś poszło nie tak: {e}")
+
+if __name__ == "__main__":
+    manual_test()
