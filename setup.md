@@ -48,6 +48,24 @@ Edit `intel_config_v33.ini`:
 2. Enable/check the TP/SL button.
 3. In "Cancel all orders", select "All" from the dropdown (options: "All", "LIMIT", "Stop-Limit"). Note: There is no default selection, but Binance remembers the choice after the first manual selection.
 
+- **[LIST_WEBSITE]**: The initial config works when: chrome > AI (tab) > open 15 websites. Log in to the coinglass website. You can use [my referal link](https://www.coinglass.com/?ref_code=QXRIVG) if you like.
+
+1. https://gemini.google.com/app/
+2. https://www.binance.com/en/futures/BTCUSDT
+3. https://www.tradingview.com/chart
+4. https://www.bitmex.com/app/trade/XBTUSD
+5. https://legend.coinglass.com/chart
+6. https://grok.com/
+7. https://copilot.microsoft.com/
+8. https://chat.deepseek.com/
+9. https://lmarena.ai/ (Qwen3 Max)
+10. https://www.coinglass.com/BitcoinOpenInterest
+11. https://www.coinglass.com/LongShortRatio
+12. https://www.coinglass.com/LiquidationData
+13. https://www.coinglass.com/pro/i/RsiHeatMap
+14. https://www.coinglass.com/large-orderbook-statistics
+15. https://www.coinglass.com/FundingRate
+
 ## Step 5: Calibration (Must-Do!)
 Run `python main.py` → Menu → "Kalibracja".
 - Hover over tabs/buttons (e.g., Binance tab, copy btn in AI chats).
