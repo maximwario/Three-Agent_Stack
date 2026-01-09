@@ -185,20 +185,11 @@ $0
 
 Zastanawiamy się czy obsługa tego będzie mogła postępować po za główną pętlą w czasie kiedy mamy SLIPPING spanie. Wtedy może być odwiedzanie tych stron i pilonowanie tego by dane były zbierane dokładnie z tych 5 stron internetowych. Mam tu na myśli tylko dane TXT, bo dane SS to przejście tak jak zawsze robimy. Ss bitmex i SS headmap i doszło by kilka SS z tych stron (te strony musiałby być do wybierania "SS pięciu wskaźników" zaznaczane ptaszkiem w menu przed uruchomieniem programu pętli.)
 
-==============================
-==========================================================
-===================================================================================
 **# Perspektywy. Perspective**
-Notatka Maniek: jeśli jest SLIPPING spanie to działać będzie inaczej niż jeśli nie jest SLIPPING spanie. Teraz chcemy to w pętli odwzorować. jeśli nie śpi to kolekcjonuje dane z tych pięciu stron internetowych i zapisuje do pliku tekstowego i do json. Ma być to wsad json z danych pochodzących z 30 minut zbierania ostatnich aktualnych wiadomości. To będzie podawane gdy pętla się wybudzi i będzie szła zadawać nowe pytania do wszystkich AI a następnie idzie robić SS headmap i SS bitmex i idzie po odpowiedzi do tych stron AI i idzie wkleić raport do gemini to niech załącza do raportu w formacie json dane z tych 30 min "co się działo na tych pięciu wskaźnikach w ostatnich 30 minutach?". Myślę, że taki komplet danych byłby łatwy do przetworzenia dla Gemini. To byłby komplet danych z 30 minut.
+
+Notatka Maniek: jeśli jest SLIPPING spanie to działać będzie inaczej niż jeśli nie jest SLIPPING spanie. Teraz chcemy to w pętli odwzorować. jeśli nie śpi to kolekcjonuje dane z tych pięciu stron internetowych i zapisuje do pliku tekstowego i do json. Ma być to wsad json z danych pochodzących z 30 minut zbierania ostatnich aktualnych wiadomości. To będzie podawane gdy pętla się wybudzi i będzie szła zadawać nowe pytania do wszystkich AI a następnie idzie robić SS headmap i SS bitmex i idzie po odpowiedzi do tych stron AI i idzie wkleić raport do gemini to niech załącza do raportu w formacie json dane z tych 30 min "co się działo na tych pięciu wskaźnikach w ostatnich 30 minutach?". Myślę, że taki komplet danych byłby łatwy do rzetworzenia dla Gemini. To byłby komplet danych z 30 minut.
 
 Te zmiany pozwoliłby działać skryptowi w czasie gdy śpi. Zbierałby najważniejsze dane. Można to rozbudować by te dane zebrane wstępnie posortować by to przypominało wersję API za 99 $. Trudne do napisania. Bany na IP od operatora coinglass. Można to obchodzić ale lepiej wykupić API. Wersja Z API coinglass działająca to C:\Users\maxim\all_doc_pro\ALL-TradingAgent\Epic_v8_4_et_v33\EPIC_Agent_1_v0_6_5_stop_ok poprzedni katalog.
-
-Działa poprawnie po zmianach od wersji (v0.9.2). 06.01.2026
-Dane TXT SS Vision, doskonałe zabazpieczenie w przypadku awari API Coinglass, API Binance, i innych np API różnych AI ect.
-Rozważyć naprawę (utrata internetu), przełącznik na innego operatora sieci WIFI i sieci komórkowych. Rozważyć to w planie i zrobic aktualizację ROADMAP.md INSTRUKCJA_OBSŁUGI.md
-===================================================================================
-================================================================
-=============================================
 
 **# Proof of Concept**
 1. dyt folderu projektu
@@ -294,5 +285,80 @@ Zostało ustalić timingi dla przechodzenia na binance.
 - Audyty: Focus error handling/threading (Grok/Gemini).
 - Inspiracje: Hamilton (watchdog), HFT (liquidity).
 - Timeline: Monthly, 24h stability tests.
+
+=====================================================
+10:30 09/01/2026 poprawki w helpers.py
+
+Calibration Logic Fix Plan
+Problem
+The ValidationWizard in 
+utils/helpers.py
+ has a mismatch with the execution logic in 
+agents/agent_3.py
+.
+
+Missing Limit Buttons: 
+agent_3.py
+ tries to click bin_buy_limit and bin_sell_limit for Limit orders, but these keys are never calibrated.
+Incorrect Market Buttons: 
+agent_3.py
+ uses bin_buy and bin_sell for Market orders. However, ValidationWizard calibrates these keys after switching to the Limit tab. If the layout differs between Market and Limit tabs, the clicks will miss or be inaccurate.
+Solution
+Modify 
+utils/helpers.py
+ -> 
+CalibrationWizard
+ class -> BINANCE_CONTROLS list.
+
+New Step Sequence
+... (Steps 1-9 unchanged) ...
+Market Section:
+bin_market (Tab)
+bin_market_qty
+bin_market_tp
+bin_market_sl
+[MOVE HERE] bin_buy (Market Buy Button) - Renamed description to indicate Market
+[MOVE HERE] bin_sell (Market Sell Button) - Renamed description to indicate Market
+Limit Section:
+bin_limit (Tab)
+bin_limit_price
+bin_limit_qty
+bin_limit_tp
+bin_limit_sl
+[ADD NEW] bin_buy_limit (Limit Buy Button)
+[ADD NEW] bin_sell_limit (Limit Sell Button)
+Total steps: 22 (was 20).
+
+Verification
+Review 
+utils/helpers.py
+ to ensure the list structure is correct.
+The user will need to re-run calibration (which they seem to be doing anyway).
+
+---
+
+Naprawione. Zaktualizowałem utils/helpers.py.
+
+Nowa sekwencja kalibracji (22 kroki):
+
+Kroki 1-9 (bez zmian)
+Sekcja MARKET:
+Zakładka Market, Ilość, TP, SL
+KUP (Market)
+SPRZEDAJ (Market)
+Sekcja LIMIT:
+Zakładka Limit, Cena, Ilość, TP, SL
+KUP (Limit) (Nowe!)
+SPRZEDAJ (Limit) (Nowe!)
+Teraz możesz bezpiecznie ponownie przeprowadzić kalibrację dla "Binance (Browser Tab)", a program zapisze poprawne koordynaty dla obu trybów LIMIT i MARKET. Otwórz kalibrację ponownie by dodać nowe koordynaty dla LIMIT i MARKET button. Do 10:30 09/01/2026 były dodane ręcznie w config_v33.ini
+
+Koniec poprawek w helpers.py
+
+Dla przypomnienia: tekst z setup.md:
+- **[BINANCE_CONTROLS] etc.**: For A3 (Agent_3) on/off to function properly:
+1. Ensure you are on the Binance FUTURES tab. 1920x1080 Zoom 50%
+2. Enable/check the TP/SL button.
+3. In "Cancel all orders", select "All" from the dropdown (options: "All", "LIMIT", "Stop-Limit"). Note: There is no default selection, but Binance remembers the choice after the first manual selection.
+=========================================================
 
 Feedback? Issue!
