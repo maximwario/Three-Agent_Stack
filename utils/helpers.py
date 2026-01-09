@@ -92,15 +92,16 @@ class CalibrationWizard:
                  ("bin_market_qty", "11. Pole ILOŚĆ (Size) w zakładce Market"),
                  ("bin_market_tp", "12. Pole TP (Opcjonalne, w zakładce Market)"),
                  ("bin_market_sl", "13. Pole SL (Opcjonalne, w zakładce Market)"),
+                 ("bin_buy", "14. Przycisk KUP/LONG (MARKET)"),
+                 ("bin_sell", "15. Przycisk SPRZEDAJ/SHORT (MARKET)"),
 
-                 ("bin_limit", "14. Zakładka LIMIT (W panelu składania zleceń)"),
-                 ("bin_limit_price", "15. Pole CENA (Price) w zakładce Limit"),
-                 ("bin_limit_qty", "16. Pole ILOŚĆ (Size) w zakładce Limit"),
-                 ("bin_limit_tp", "17. Pole TP (Opcjonalne, w zakładce Limit)"),
-                 ("bin_limit_sl", "18. Pole SL (Opcjonalne, w zakładce Limit)"),
-
-                 ("bin_buy", "19. Przycisk KUP/LONG (Zielony)"),
-                 ("bin_sell", "20. Przycisk SPRZEDAJ/SHORT (Czerwony)")
+                 ("bin_limit", "16. Zakładka LIMIT (W panelu składania zleceń)"),
+                 ("bin_limit_price", "17. Pole CENA (Price) w zakładce Limit"),
+                 ("bin_limit_qty", "18. Pole ILOŚĆ (Size) w zakładce Limit"),
+                 ("bin_limit_tp", "19. Pole TP (Opcjonalne, w zakładce Limit)"),
+                 ("bin_limit_sl", "20. Pole SL (Opcjonalne, w zakładce Limit)"),
+                 ("bin_buy_limit", "21. Przycisk KUP/LONG (LIMIT)"),
+                 ("bin_sell_limit", "22. Przycisk SPRZEDAJ/SHORT (LIMIT)")
             ]
 
         # 4. KONTROLA GEMINI
