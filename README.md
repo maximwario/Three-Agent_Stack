@@ -21,7 +21,7 @@ Szczegóły: [docs/architecture.md](docs/ARCHITEKTURA_HAMILTON.md) (Hamilton-ins
 ## Inspiracje i Analizy
 - Three-Agent Stack w HFT: [docs/hft_inspiration.md](docs/IDEA_PLAISANT_GEMINI.md).
 - Analiza Groka: Zalążek AGI tradingu – [docs/project_analysis.md](docs/IDEA_PLAISANT_GROK.md).
-- Prompty AI: [docs/prompts/](docs/prompts) (INIT_* files).
+- Prompty AI: [docs/prompts](https://github.com/maximwario/Three-Agent_Stack/tree/main/prompts) (INIT_* files).
 
 ## Instalacja
 1. Python 3.10+.
@@ -43,9 +43,9 @@ Szczegóły: [setup.md](setup.md) (uruchomienie, troubleshooting).
 
 ## Roadmap
 - v0.9.2: API, State Machine
-- Więcej: [docs/roadmap.md](docs/ROADMAP.md). [docs/INSTRUKCJA_OBSŁUGI.md](docs/INSTRUKCJA_OBSŁUGI.md).
+- Więcej: [docs/roadmap.md](docs/ROADMAP.md), [docs/INSTRUKCJA_OBSŁUGI.md](https://github.com/maximwario/Three-Agent_Stack/blob/main/docs/INSTRUKCJA_OBSLUGI.md);
 
-Licensed under GPL-3.0 – see [LICENSE](LICENSE).
+Licensed under GPL-3.0 – see [LICENSE](https://github.com/maximwario/Three-Agent_Stack/blob/main/LICENSE.md).
 
 #bitcoin #Three-Agent-Stack-by-plaisant
 
