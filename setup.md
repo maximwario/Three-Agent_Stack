@@ -54,7 +54,7 @@ Edit `intel_config_v33.ini`:
 - **[BITMEX_SETUP]**: Bitmex Configuration:
 1. Open the Bitmex BTCUSD/XBTUSD chart.
 2. In the Orderbook widget, set the Grouping to 200.0 or 500.0. This allows the bot to see "Whale Walls" effectively.
-[Visual guide for Bitmex Orderbook Grouping 200.0/500.0.](https://github.com/maximwario/Three-Agent_Stack/blob/main/docs/Orderbook_200_500.jpg)
+[Visual guide for](https://github.com/maximwario/Three-Agent_Stack/blob/main/docs/Orderbook_200_500.JPG) Bitmex Orderbook Grouping 200.0/500.0.
 
 - **[LIST_WEBSITE]**: The initial config works when: chrome > AI (tab) > open 15 websites. Log in to the coinglass website. You can use [my referal link](https://www.coinglass.com/?ref_code=QXRIVG) if you like.
 
