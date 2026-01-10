@@ -8,6 +8,8 @@ This guide walks you through setting up and running the Three-Agent Stack tradin
 - **Browser**: Chrome/Edge (open with tabs: Binance, TradingView, Coinglass, AI chats like Grok/Gemini).
 - **Accounts**: Binance demo (futures), Coinglass API key (free tier OK via [reflink](https://www.coinglass.com/?ref_code=QXRIVG)).
 - **Signal-CLI**: For notifications (optional but recommended).
+- AI Subscription: Gemini Advanced (paid) is required. You must upload all project files to the Gemini context window before starting for the model to understand the full logic.
+Display: An active screen is required (no headless mode) because the VISION module scrapes data via screen snapshots.
 
 ## Step 1: Clone the Repository
 ```bash
@@ -49,6 +51,11 @@ Edit `intel_config_v33.ini`:
 3. In "Cancel all orders", select "All" from the dropdown (options: "All", "LIMIT", "Stop-Limit"). Note: There is no default selection, but Binance remembers the choice after the first manual selection.
 - [Visual guide for manual setting the "ALL"](https://github.com/maximwario/Three-Agent_Stack/blob/main/docs/button_cancell_all.jpg) button in order cancell button "Anuluc wszystkie zlecenia" ("Cancell_All_orders").
 
+- **[BITMEX_SETUP]**: Bitmex Configuration:
+1. Open the Bitmex BTCUSD/XBTUSD chart.
+2. In the Orderbook widget, set the Grouping to 200.0 or 500.0. This allows the bot to see "Whale Walls" effectively.
+[Visual guide for Bitmex Orderbook Grouping 200.0/500.0.](https://github.com/maximwario/Three-Agent_Stack/blob/main/docs/Orderbook_200_500.jpg)
+
 - **[LIST_WEBSITE]**: The initial config works when: chrome > AI (tab) > open 15 websites. Log in to the coinglass website. You can use [my referal link](https://www.coinglass.com/?ref_code=QXRIVG) if you like.
 
 1. https://gemini.google.com/app/
@@ -67,7 +74,7 @@ Edit `intel_config_v33.ini`:
 14. https://www.coinglass.com/large-orderbook-statistics
 15. https://www.coinglass.com/FundingRate
 
-## Step 5: Calibration (Must-Do!)
+## Step 5: Calibration (Works on initial config_v33.ini)
 Run `python main.py` → Menu → "Kalibracja".
 - Hover over tabs/buttons (e.g., Binance tab, copy btn in AI chats).
 - Press F2 to capture coords/images – saves to config/assets/.
