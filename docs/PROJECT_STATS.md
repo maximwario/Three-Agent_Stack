@@ -1,7 +1,11 @@
 # Project Codebase Statistics
 
 **Generated on:** 2026-01-10 20:06 UTC
+<<<<<<< Updated upstream
 **Scope:** `Three-Agent-Stack`
+=======
+**Scope:** `Three-Agent-Stack` (excluding `.git`)
+>>>>>>> Stashed changes
 
 ## 📊 High-Level Summary
 | Metric | Count |
@@ -32,5 +36,9 @@ The project is moderately sized with **4,962** lines of Python code distributed 
 ## 🧮 Detailed Source Metrics (Python)
 - **Functions (`def`)**: 232 definitions.
 - **Classes (`class`)**: 29 definitions.
+<<<<<<< Updated upstream
 - **Total LOC**: 4,962 lines.
 Total LOC: 4,962 lines.
+=======
+- **Total LOC**: 4,962 lines.
+>>>>>>> Stashed changes
