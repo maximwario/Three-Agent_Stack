@@ -47,6 +47,7 @@ Edit `intel_config_v33.ini`:
 1. Ensure you are on the Binance FUTURES tab.
 2. Enable/check the TP/SL button.
 3. In "Cancel all orders", select "All" from the dropdown (options: "All", "LIMIT", "Stop-Limit"). Note: There is no default selection, but Binance remembers the choice after the first manual selection.
+- [Visual guide for manual setting the "ALL"](https://github.com/maximwario/Three-Agent_Stack/blob/main/docs/button_cancell_all.jpg) button in order cancell button "Anuluc wszystkie zlecenia" ("Cancell_All_orders").
 
 - **[LIST_WEBSITE]**: The initial config works when: chrome > AI (tab) > open 15 websites. Log in to the coinglass website. You can use [my referal link](https://www.coinglass.com/?ref_code=QXRIVG) if you like.
 
