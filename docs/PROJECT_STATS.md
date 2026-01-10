@@ -37,3 +37,14 @@ The project is moderately sized with **4,962** lines of Python code distributed 
 Total LOC: 4,962 lines.
 
 - **Total LOC**: 4,962 lines.
+
+## 📊 Report statistics Summary
+- **Data Section Approximate Character Count Approximate Token Count""
+
+[CORE DOCTRINE] + Instructions ~2,800 characters ~700 tokens
+[DATA SNAPSHOT] (Binance/TV) ~500 characters ~120 tokens
+[WEB SCRAPED INDICATORS] ~18,000 - 25,000 characters ~4,500 - 6,000 tokens
+[COUNCIL REPORTS] (Copilot/Qwen/Deep) ~3,500 characters ~900 tokens
+[POSITION_HISTORY_LOG] ~8,000 - 12,000 characters ~2,000 - 3,000 tokens
+
+SUM (Input) ~33,000 - 43,000 characters ~8,000 - 11,000 tokens
