@@ -1,45 +1,49 @@
 # Project Codebase Statistics
 
-Generated on: 2026-01-10 20:06 UTC
+Generated on: 2026-01-11
 **Scope:** `Three-Agent-Stack`
 
-## 📊 High-Level Summary
+## 📊 High-Level Summary (Active Project)
 | Metric | Count |
 | :--- | :--- |
-| **Total Python Files** | **34** |
-| **Total Lines of Code (Python)** | **4,962** |
-| **Total Functions def** | **232** |
-| **Total Classes** | **29** |
+| **Total Python Files** | **31** |
+| **Total Lines of Code (Python)** | **3,517** |
+| **Total Functions def** | **159** |
+| **Total Classes** | **21** |
 
-## 📁 File Breakdown by Extension
+## 🏛️ Archived / Legacy (`TECHNICAL_OLD`)
+| Metric | Count |
+| :--- | :--- |
+| **Total Python Files** | **4** |
+| **Total Lines of Code (Python)** | **1,502** |
+| **Total Functions def** | **94** |
+| **Total Classes** | **10** |
+
+## 📁 File Breakdown by Extension (Active Project)
 | Extension | Count | Description |
 | :--- | :--- | :--- |
-| `.png` | 40 | Image Assets / Screenshots |
-| `.py` | 34 | Python Source Code |
-| `.md` | 17 | Documentation / Artifacts |
-| `.json` | 2 | Configuration / Data |
+| `.png` | 39 | Image Assets / Screenshots |
+| `.py` | 31 | Python Source Code |
+| `.md` | 19 | Documentation / Artifacts |
 | `.jpg` | 2 | Image Assets |
+| `.json` | 0 | Configuration / Data (None found in active scope) |
 | `.txt` | 1 | Text Logs / Requirements |
 | `.ini` | 1 | Configuration |
-| *(no ext)* | 2 | System Files / Owners |
+| *(no ext)* | 1 | System Files |
 
-## 🏗️ Structure Analysis
-The project is moderately sized with **4,962** lines of Python code distributed across **34** files.
-- **Complexity Ratio**: Average of **~146 lines per file**.
-- **Functional Density**: Average of **~6.8 functions per file**.
-- **Object-Oriented**: **29** Classes defined, suggesting a mixed functional/OOP architecture (typical for agentic systems with util modules).
+## 🏗️ Structure Analysis (Active Project)
+The active project consists of **3,517** lines of Python code distributed across **31** files.
+- **Complexity Ratio**: Average of **~113 lines per file**.
+- **Functional Density**: Average of **~5.1 functions per file**.
+- **Object-Oriented**: **21** Classes defined.
 
-## 🧮 Detailed Source Metrics (Python)
-- **Functions (`def`)**: 232 definitions.
-- **Classes (`class`)**: 29 definitions.
-
-- **Total LOC**: 4,962 lines.
-Total LOC: 4,962 lines.
-
-- **Total LOC**: 4,962 lines.
+## 🧮 Detailed Source Metrics (Active Python)
+- **Functions (`def`)**: 159 definitions.
+- **Classes (`class`)**: 21 definitions.
+- **Total LOC**: 3,517 lines (non-empty).
 
 ## 📊 Report statistics Summary
-- **Data Section Approximate Character Count Approximate Token Count**
+**Data Section Approximate Character Count Approximate Token Count**
 
 - **[CORE DOCTRINE]** + Instructions ~2,800 characters ~700 tokens
 - **[DATA SNAPSHOT]** (Binance/TV) ~500 characters ~120 tokens
