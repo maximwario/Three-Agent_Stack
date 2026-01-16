@@ -84,10 +84,10 @@ Filozofia: Rynek to nie tylko liczby, to walka o płynność. Twoim celem jest b
 [FORMAT STRATEGII DLA RADY]:
 [NEXT_CYCLE_STRATEGY]
 {
-    "GROK": "Specific instruction for sentiment analysis on X. Możesz dostarczyć wszystkich niezbędnych danychm, jeśli o to poprosi",
-    "COPILOT": "Instruction for On-Chain/Heatmap double-check. Możesz dostarczyć wszystkich niezbędnych danychm, jeśli o to poprosi",
-    "DEEPSEEK": "Instruction for EV and Risk Math verification. Możesz dostarczyć wszystkich niezbędnych danychm, jeśli o to poprosi",
-    "QWEN": "Instruction for Market Structure/CVD analysis. Możesz dostarczyć wszystkich niezbędnych danychm, jeśli o to poprosi"
+    "GROK": "Specific instruction for sentiment analysis on X. Możesz dostarczyć wszystkich niezbędnych danych, jeśli o to poprosi",
+    "COPILOT": "Instruction for On-Chain/Heatmap double-check. Możesz dostarczyć wszystkich niezbędnych danych, jeśli o to poprosi",
+    "DEEPSEEK": "Instruction for EV and Risk Math verification. Możesz dostarczyć wszystkich niezbędnych danych, jeśli o to poprosi",
+    "QWEN": "Instruction for Market Structure/CVD analysis. Możesz dostarczyć wszystkich niezbędnych danych, jeśli o to poprosi"
 }
 [END_STRATEGY]
 
@@ -96,10 +96,10 @@ Filozofia: Rynek to nie tylko liczby, to walka o płynność. Twoim celem jest b
 2. ZAKAZ POWTARZALNOŚCI: Nie wysyłaj tych samych pytań w każdym cyklu. Jeśli rynek się zmienia, Twoje pytania MUSZĄ ewoluować.
 3. KONKRET: Zamiast 'Analizuj rynek', każ im 'Znajdź 3 największe klastry likwidacji powyżej 96k' lub 'Oblicz EV dla scenariusza Fakeout na poziomie 94.5k'.
 4. WYKORZYSTAJ SPECJALIZACJE: 
-   - GROK: Sentyment i newsy na żywo z X. Możesz dostarczyć wszystkich niezbędnych danychm, jeśli o to poprosi.
-   - COPILOT: Pytania ogólne o kurs BTC/USD. Możesz dostarczyć wszystkich niezbędnych danychm, jeśli o to poprosi.
-   - DEEPSEEK: Matematyka ryzyka i zaawansowane EV. Możesz dostarczyć wszystkich niezbędnych danychm, jeśli o to poprosi.
-   - QWEN: Struktura rynku i opłacalność naszego zagrania EV. Możesz dostarczyć wszystkich niezbędnych danychm, jeśli o to poprosi.
+   - GROK: Sentyment i newsy na żywo z X. Możesz dostarczyć wszystkich niezbędnych danych, jeśli o to poprosi.
+   - COPILOT: Pytania ogólne o kurs BTC/USD. Możesz dostarczyć wszystkich niezbędnych danych, jeśli o to poprosi.
+   - DEEPSEEK: Matematyka ryzyka i zaawansowane EV. Możesz dostarczyć wszystkich niezbędnych danych, jeśli o to poprosi.
+   - QWEN: Struktura rynku i opłacalność naszego zagrania EV. Możesz dostarczyć wszystkich niezbędnych danych, jeśli o to poprosi.
 """
 
 class StrategistAgent:
